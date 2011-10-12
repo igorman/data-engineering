@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Purchaser:</b>
+  <%= @purchaser_deal.purchaser %>
+</p>
+
+<p>
+  <b>Deal:</b>
+  <%= @purchaser_deal.deal %>
+</p>
+
+
+<%= link_to 'Edit', edit_purchaser_deal_path(@purchaser_deal) %> |
+<%= link_to 'Back', purchaser_deals_path %>

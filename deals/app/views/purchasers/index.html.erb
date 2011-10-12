@@ -1,0 +1,23 @@
+<h1>Listing purchasers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @purchasers.each do |purchaser| %>
+  <tr>
+    <td><%= purchaser.name %></td>
+    <td><%= link_to 'Show', purchaser %></td>
+    <td><%= link_to 'Edit', edit_purchaser_path(purchaser) %></td>
+    <td><%= link_to 'Destroy', purchaser, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Purchaser', new_purchaser_path %>

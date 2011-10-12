@@ -1,0 +1,63 @@
+Instructions:
+
+1. Download the deals directory.
+
+2. cd into the deals directory.
+
+3. run: 
+
+rails server
+
+4. Once the server has finished initializing, you will see a line that includes the port #.  After that, bring up a browser and enter the url:
+
+localhost:3000/conversion
+
+5. Click "Choose File" and select example_input.tab in the deals directory or any other tab delimited file.
+
+NOTE:  The example_input.tab that was downloaded from github was not purely tab delimited.  It had spaces between 2 of the columns.  The version of the same file that is included with this program is tab delimited.
+
+6. Select Upload.
+
+7. The file will now be converted and the data written to the database.  The total amount purchased will be displayed.
+
+
+
+
+Other information:
+
+1. To reload the data file without any data in the db, execute the following from a sql command line connected to the deal_development database:
+
+delete from purchaser_deals;
+
+delete from deals;
+
+delete from merchants;
+
+delete from purchasers;
+
+
+
+Re-running the program will do no harm though, without deleting the data.
+
+
+
+2. To see the data in the database, execute the following from a sql command line connected to the deal_development database:
+
+select merchants.name, merchants.address, deals.description, deals.price, purchasers.name from merchants, deals, purchasers, purchaser_deals
+where merchants.id=deals.merchant_id
+and deals.id=purchaser_deals.deal_id
+and purchasers.id=purchaser_deals.purchaser_id;
+
+
+
+and the data in the individual tables can be seen by running:
+
+
+select * from merchants;
+
+select * from purchasers;
+
+select * from deals;
+
+select * from purchaser_deals;
+

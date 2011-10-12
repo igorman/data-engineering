@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  description: MyString
+  price: 1.5
+  numberPurchased: 1
+  merchant: 
+
+two:
+  description: MyString
+  price: 1.5
+  numberPurchased: 1
+  merchant: 
