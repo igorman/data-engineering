@@ -1,5 +1,8 @@
 Prerequisite:
-If you do not already have ruby 1.9.2 installed on your computer, download it from the internet.
+Please be sure you have the following installed on your computer prior to starting the server:
+ruby 1.9.2
+rails 3.1.0
+sqlite3 (gem install sqlite3)
 
 Instructions:
 
